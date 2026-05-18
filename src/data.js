@@ -91,8 +91,8 @@ export const headerData = {
     // },
   ],
   actions: [
-    { type: 'button', text: 'Registrarse', href: 'https://app.cimadent.cl/register' },
-    { type: 'link', text: 'Iniciar sesión', href: 'https://app.cimadent.cl' },
+    { type: 'button', text: 'Registrarse', href: '/migracion#registro' },
+    { type: 'link', text: 'Iniciar sesión', href: '/migracion' },
   ],
 };
 

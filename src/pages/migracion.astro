@@ -1,0 +1,172 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Logo from '~/components/Logo.astro';
+
+const meta = {
+  title: 'Migración a CIMAOS — CIMADent',
+  description:
+    'El 1 de junio de 2026 CIMADent evolucionará a CIMAOS. Conoce cómo será tu migración y coordina con Manuel.',
+  noindex: true,
+};
+
+const MANUEL_EMAIL = 'manuel@cimaos.com';
+const MANUEL_WHATSAPP_URL = 'https://wa.me/56982208792';
+const CIMAOS_URL = 'https://cimaos.com';
+const LEGACY_LOGIN_URL = 'https://app.cimadent.cl';
+const LEGACY_REGISTER_URL = 'https://app.cimadent.cl/register';
+const MIGRATION_DATE = '1 de junio de 2026';
+---
+
+<BaseLayout {meta}>
+  <header class="py-6 border-b border-slate-100 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 flex justify-center">
+      <a href="/" class="flex items-center">
+        <Logo />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+          <!-- IZQUIERDA: Carta de Manuel -->
+          <article class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-8 md:p-12 shadow-sm">
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center text-primary font-bold text-lg">M</div>
+              <div>
+                <p class="font-semibold text-third dark:text-white">Manuel — Equipo CIMADent</p>
+                <p class="text-xs text-muted dark:text-slate-400">Carta para nuestras clínicas · Abril 2026</p>
+              </div>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-third dark:text-white font-heading leading-tight mb-6">
+              Queremos contarte algo importante
+            </h2>
+
+            <div class="prose dark:prose-invert max-w-none text-muted dark:text-slate-300 space-y-4">
+              <p>Hola,</p>
+              <p>
+                Durante estos años, CIMADent ha sido parte del día a día de tu clínica. Nos tomamos muy en serio
+                esa confianza, y por eso hoy queremos contarte, en primera persona, lo que viene.
+              </p>
+              <p>
+                El <strong class="text-third dark:text-white">{MIGRATION_DATE}</strong>, CIMADent evolucionará a
+                <strong class="text-primary">CIMAOS</strong>: una nueva plataforma que construimos desde cero
+                pensando en todo lo que nos has pedido —más velocidad, inteligencia artificial que te asista, y
+                una experiencia móvil al nivel del 2026.
+              </p>
+              <p>
+                <strong>No pierdes nada.</strong> Tus pacientes, tu agenda, tu historial clínico y tu
+                configuración se migran automáticamente. Tu equipo entra el 1 de junio con la misma información,
+                en una plataforma mejor.
+              </p>
+              <p>
+                Mientras tanto, puedes seguir usando CIMADent como siempre. Y si quieres adelantar tu migración
+                o simplemente tienes dudas, escríbeme directamente —yo personalmente acompaño a cada clínica en
+                el proceso.
+              </p>
+              <p>Gracias por confiar en nosotros,</p>
+              <p class="font-heading text-third dark:text-white italic">— Manuel</p>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-700">
+              <p class="text-sm text-muted dark:text-slate-400">
+                Escríbeme directamente:
+                <a href={`mailto:${MANUEL_EMAIL}`} class="text-primary font-semibold hover:underline">{MANUEL_EMAIL}</a>
+                · <a href={MANUEL_WHATSAPP_URL} class="text-primary font-semibold hover:underline">WhatsApp</a>
+              </p>
+            </div>
+          </article>
+
+          <!-- DERECHA: Dos opciones apiladas -->
+          <div class="space-y-4 lg:sticky lg:top-8">
+
+            <!-- CIMAOS (recomendado) -->
+            <div class="relative rounded-xl border-2 border-primary bg-gradient-to-br from-primary/5 to-primary/0 p-5 shadow-md">
+              <div class="absolute -top-2.5 left-5 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full">
+                Recomendado
+              </div>
+              <div class="flex items-center gap-2 mb-2 mt-1">
+                <span class="text-xl font-bold text-third dark:text-white font-heading">CIMAOS</span>
+                <span class="text-[10px] bg-third/10 dark:bg-white/10 text-third dark:text-white rounded px-1.5 py-0.5">Nueva plataforma</span>
+              </div>
+              <p class="text-sm text-muted dark:text-slate-300 mb-3 leading-relaxed">
+                La migración se coordina personalmente con Manuel: tu información pasa de CIMADent a CIMAOS
+                de forma acompañada. <strong class="text-third dark:text-white">No es llegar e iniciar sesión</strong> —
+                primero migramos tu data y te entregamos el acceso.
+              </p>
+              <p class="text-xs text-muted dark:text-slate-400 mb-4">
+                Escríbele a Manuel para conocer el proceso o para comenzar a migrar cuanto antes.
+              </p>
+              <div class="flex gap-2">
+                <a href={MANUEL_WHATSAPP_URL} class="flex-1 inline-flex justify-center items-center gap-1.5 rounded-md bg-primary hover:opacity-90 px-3 py-2 text-xs font-semibold text-white transition">
+                  WhatsApp Manuel
+                </a>
+                <a href={`mailto:${MANUEL_EMAIL}?subject=Quiero%20migrar%20a%20CIMAOS`} class="flex-1 inline-flex justify-center items-center gap-1.5 rounded-md border border-primary text-primary hover:bg-primary/5 px-3 py-2 text-xs font-semibold transition">
+                  Escribir email
+                </a>
+              </div>
+              <a href={CIMAOS_URL} target="_blank" rel="noopener" class="block text-center mt-3 text-[11px] text-muted dark:text-slate-400 hover:text-primary transition">
+                ¿Quieres saber más? Conoce CIMAOS en cimaos.com →
+              </a>
+            </div>
+
+            <!-- CIMADent (tabs) -->
+            <div
+              class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5"
+              x-data="{ tab: window.location.hash === '#registro' ? 'register' : 'login' }"
+            >
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-xl font-bold text-third dark:text-white font-heading">CIMADent</span>
+                <span class="text-[10px] bg-amber-100 text-amber-800 rounded px-1.5 py-0.5">Hasta el {MIGRATION_DATE}</span>
+              </div>
+
+              <div class="flex gap-1 p-1 bg-slate-100 dark:bg-slate-800 rounded-lg mb-4">
+                <button
+                  @click="tab = 'login'"
+                  :class="tab === 'login' ? 'bg-white dark:bg-slate-700 text-third dark:text-white shadow-sm' : 'text-muted dark:text-slate-400'"
+                  class="flex-1 rounded-md px-2 py-1.5 text-xs font-semibold transition"
+                >Ya tengo cuenta</button>
+                <button
+                  @click="tab = 'register'"
+                  :class="tab === 'register' ? 'bg-white dark:bg-slate-700 text-third dark:text-white shadow-sm' : 'text-muted dark:text-slate-400'"
+                  class="flex-1 rounded-md px-2 py-1.5 text-xs font-semibold transition"
+                >Soy nuevo</button>
+              </div>
+
+              <div x-show="tab === 'login'" x-transition class="space-y-3">
+                <p class="text-sm text-muted dark:text-slate-300 leading-relaxed">
+                  Podrás acceder a tus datos en CIMADent hasta el <strong class="text-third dark:text-white">{MIGRATION_DATE}</strong>.
+                  A partir de esa fecha, todo estará en CIMAOS.
+                </p>
+                <a href={LEGACY_LOGIN_URL} class="block w-full text-center rounded-md bg-third dark:bg-white text-white dark:text-third hover:opacity-90 px-3 py-2 text-xs font-semibold transition">
+                  Continuar e iniciar sesión →
+                </a>
+              </div>
+
+              <div x-show="tab === 'register'" x-transition class="space-y-3">
+                <div class="rounded-md bg-primary/10 border border-primary/30 p-3">
+                  <p class="text-xs font-semibold text-primary mb-1">Te recomendamos no registrarte en CIMADent</p>
+                  <p class="text-xs text-muted dark:text-slate-300 leading-relaxed">
+                    CIMAOS ya está disponible y funcionando. Como vamos a migrar igual el {MIGRATION_DATE},
+                    es mejor que partas directamente en la nueva plataforma.
+                  </p>
+                </div>
+                <a href={MANUEL_WHATSAPP_URL} class="block w-full text-center rounded-md bg-primary hover:opacity-90 px-3 py-2 text-xs font-semibold text-white transition">
+                  Crear mi cuenta en CIMAOS con Manuel
+                </a>
+                <a href={LEGACY_REGISTER_URL} class="block text-center text-[11px] text-slate-400 hover:text-slate-500 underline">
+                  Aún así quiero registrarme en CIMADent
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
